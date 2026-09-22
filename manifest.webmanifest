@@ -1,0 +1,9 @@
+{
+  "name": "Atlas — Asset Net Worth",
+  "short_name": "Atlas",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8f8f5",
+  "theme_color": "#1d2a2f",
+  "icons": [{"src": "apple-touch-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}
