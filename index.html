@@ -30,6 +30,9 @@
     <div class="sheet" id="detailSheet" aria-hidden="true"><section class="modal"><button class="close" id="detailClose" aria-label="Close">×</button><div class="handle"></div><h2 id="detailTitle">Asset details</h2><p id="detailSummary">Update values to keep your net worth accurate.</p><div class="fields"><label class="full">ASSET NAME<input id="editName"></label><label>CATEGORY<select id="editCategory"><option>Computers</option><option>Cameras</option><option>Phones</option><option>Tablets</option><option>Other</option></select></label><label>CURRENT VALUE (€)<input id="editValue" type="number"></label><label>ANNUAL DEPRECIATION (%)<input id="editDepreciation" type="number" min="0" max="100" value="15"></label><label class="full">NOTES<input id="editNotes" placeholder="Condition, serial number, warranty…"></label></div><button class="save" id="updateBtn">Save changes</button></section></div>
     <script>
       const sheet=document.getElementById('sheet'),photo=document.getElementById('photo');
+      const parisHour=Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Paris',hour:'2-digit',hourCycle:'h23'}).format(new Date()));
+      const greeting=parisHour<12?'Good morning':parisHour<18?'Good afternoon':'Good evening';
+      document.querySelector('.greeting').innerHTML=`${greeting}, <b>Brian.</b>`;
       document.getElementById('addBtn').onclick=()=>{sheet.classList.add('open');sheet.setAttribute('aria-hidden','false')};
       document.getElementById('closeBtn').onclick=()=>{sheet.classList.remove('open');sheet.setAttribute('aria-hidden','true')};
       const detailSheet=document.getElementById('detailSheet');let selectedAsset=null;
