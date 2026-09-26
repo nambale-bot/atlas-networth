@@ -1,0 +1,6 @@
+{
+  "appId": "io.atlas.assetnetworth",
+  "appName": "Atlas",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
